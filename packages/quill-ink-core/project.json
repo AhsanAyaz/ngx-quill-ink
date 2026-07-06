@@ -51,6 +51,15 @@
       "dependsOn": [
         "build-worker"
       ]
+    },
+    "size": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "build"
+      ],
+      "options": {
+        "command": "node tools/scripts/check-size.mjs core"
+      }
     }
   }
 }

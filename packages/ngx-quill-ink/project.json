@@ -47,6 +47,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
+    },
+    "size": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        "build"
+      ],
+      "options": {
+        "command": "node tools/scripts/check-size.mjs ngx"
+      }
     }
   }
 }
