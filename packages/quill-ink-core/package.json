@@ -6,5 +6,24 @@
   "dependencies": {},
   "license": "MIT",
   "sideEffects": false,
-  "description": "Framework-agnostic canvas engine that renders streaming text as animated handwriting."
+  "description": "Framework-agnostic canvas engine that renders streaming text as animated handwriting.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codewithahsan/ngx-quill-ink.git"
+  },
+  "bugs": "https://github.com/codewithahsan/ngx-quill-ink/issues",
+  "homepage": "https://github.com/codewithahsan/ngx-quill-ink#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "handwriting",
+    "canvas",
+    "animation",
+    "streaming",
+    "llm",
+    "ink",
+    "angular",
+    "quill"
+  ]
 }

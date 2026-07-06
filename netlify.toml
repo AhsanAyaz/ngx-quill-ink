@@ -1,0 +1,8 @@
+[build]
+  command = "npx nx build quill-ink-demo"
+  publish = "dist/apps/quill-ink-demo/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

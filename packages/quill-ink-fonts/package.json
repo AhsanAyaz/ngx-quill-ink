@@ -30,5 +30,24 @@
       "types": "./src/lib/shadows-into-light.d.ts",
       "default": "./src/lib/shadows-into-light.js"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codewithahsan/ngx-quill-ink.git"
+  },
+  "bugs": "https://github.com/codewithahsan/ngx-quill-ink/issues",
+  "homepage": "https://github.com/codewithahsan/ngx-quill-ink#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "handwriting",
+    "canvas",
+    "animation",
+    "streaming",
+    "llm",
+    "ink",
+    "angular",
+    "quill"
+  ]
 }

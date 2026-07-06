@@ -31,7 +31,8 @@
             "input": "packages/quill-ink-fonts/src/packs",
             "glob": "**/*-OFL.txt",
             "output": "./src/packs"
-          }
+          },
+          "packages/quill-ink-fonts/LICENSE"
         ]
       }
     },

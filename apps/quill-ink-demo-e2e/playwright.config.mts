@@ -2,8 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 import { nxE2EPreset } from '@nx/playwright/preset';
 import { workspaceRoot } from '@nx/devkit';
 
-// For CI, you may want to set BASE_URL to the deployed application.
-const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
+// Dedicated port: 4200 commonly hosts another dev server on contributor
+// machines, and reuseExistingServer would silently test the wrong app.
+const baseURL = process.env['BASE_URL'] || 'http://localhost:4299';
 
 /**
  * Read environment variables from file.
@@ -31,10 +32,11 @@ export default defineConfig({
   },
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npx nx run quill-ink-demo:serve',
-    url: 'http://localhost:4200',
+    command: 'npx nx run quill-ink-demo:serve --port=4299',
+    url: 'http://localhost:4299',
     reuseExistingServer: true,
     cwd: workspaceRoot,
+    timeout: 180_000,
   },
   projects: [
     {
