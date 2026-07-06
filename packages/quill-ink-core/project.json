@@ -20,6 +20,37 @@
       "options": {
         "packageRoot": "dist/{projectRoot}"
       }
+    },
+    "build-worker": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": [
+        "{workspaceRoot}/tools/scripts/build-worker.mjs",
+        "{projectRoot}/src/lib/worker/skeleton-worker.entry.ts",
+        "{projectRoot}/src/lib/pipeline/**/*.ts"
+      ],
+      "outputs": [
+        "{projectRoot}/src/lib/worker/worker-code.generated.ts"
+      ],
+      "options": {
+        "command": "node tools/scripts/build-worker.mjs"
+      }
+    },
+    "build": {
+      "dependsOn": [
+        "^build",
+        "build-worker"
+      ]
+    },
+    "vite:test": {
+      "dependsOn": [
+        "build-worker"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "build-worker"
+      ]
     }
   }
 }

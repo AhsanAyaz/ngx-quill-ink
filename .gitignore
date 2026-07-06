@@ -55,3 +55,6 @@ vitest.config.*.timestamp*
 .nx/self-healing
 .nx/migrate-runs
 __screenshots__/
+
+# generated inline worker bundle
+packages/quill-ink-core/src/lib/worker/worker-code.generated.ts

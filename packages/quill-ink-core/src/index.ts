@@ -9,3 +9,6 @@ export * from './lib/pipeline/glyph-pipeline';
 export * from './lib/util/rng';
 export * from './lib/util/noise';
 export * from './lib/util/env';
+export * from './lib/worker/worker-host';
+export { handleSkeletonRequest } from './lib/worker/skeleton-worker.entry';
+export type { SkeletonRequest, SkeletonResponse } from './lib/worker/skeleton-worker.entry';
