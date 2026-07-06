@@ -12,3 +12,4 @@ export * from './lib/util/env';
 export * from './lib/worker/worker-host';
 export { handleSkeletonRequest } from './lib/worker/skeleton-worker.entry';
 export type { SkeletonRequest, SkeletonResponse } from './lib/worker/skeleton-worker.entry';
+export * from './lib/fonts/font-pack';

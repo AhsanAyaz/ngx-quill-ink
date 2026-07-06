@@ -26,13 +26,24 @@
         "main": "packages/quill-ink-fonts/src/index.ts",
         "tsConfig": "packages/quill-ink-fonts/tsconfig.lib.json",
         "assets": [
-          "packages/quill-ink-fonts/*.md"
+          "packages/quill-ink-fonts/*.md",
+          {
+            "input": "packages/quill-ink-fonts/src/packs",
+            "glob": "**/*-OFL.txt",
+            "output": "./src/packs"
+          }
         ]
       }
     },
     "nx-release-publish": {
       "options": {
         "packageRoot": "dist/{projectRoot}"
+      }
+    },
+    "generate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx tsx tools/font-packs/generate.ts --font=all"
       }
     }
   }

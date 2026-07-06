@@ -6,5 +6,29 @@
   "types": "./src/index.d.ts",
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "description": "Precomputed handwriting glyph skeleton packs (Caveat, Dancing Script, Shadows Into Light) for quill-ink.",
+  "peerDependencies": {
+    "@codewithahsan/quill-ink-core": "^0.0.1"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./caveat": {
+      "types": "./src/lib/caveat.d.ts",
+      "default": "./src/lib/caveat.js"
+    },
+    "./dancing-script": {
+      "types": "./src/lib/dancing-script.d.ts",
+      "default": "./src/lib/dancing-script.js"
+    },
+    "./shadows-into-light": {
+      "types": "./src/lib/shadows-into-light.d.ts",
+      "default": "./src/lib/shadows-into-light.js"
+    }
   }
 }
