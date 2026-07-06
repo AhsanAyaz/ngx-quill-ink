@@ -2,7 +2,10 @@
   "name": "@codewithahsan/ngx-quill-ink",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/core": "^21.2.0"
+    "@angular/core": "^21.2.0",
+    "@codewithahsan/quill-ink-core": "^0.0.1"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "license": "MIT",
+  "description": "Angular wrapper for quill-ink: streaming text as animated handwriting, signals-first."
 }

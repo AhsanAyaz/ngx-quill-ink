@@ -1,0 +1,46 @@
+:host {
+  display: block;
+}
+
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eceff4;
+
+  .brand {
+    font-weight: 700;
+    color: #1a2b4a;
+  }
+
+  .links {
+    display: flex;
+    gap: 1.1rem;
+
+    a {
+      color: #48536a;
+      text-decoration: none;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: #1a2b4a;
+      }
+    }
+  }
+}
+
+.footer {
+  max-width: 860px;
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  border-top: 1px solid #eceff4;
+  color: #8a93a5;
+  font-size: 0.85rem;
+  text-align: center;
+}
