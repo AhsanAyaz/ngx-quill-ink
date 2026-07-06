@@ -15,22 +15,21 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/api/products": ["packages/api/products/src/index.ts"],
-      "@org/models": ["packages/shared/models/src/index.ts"],
-      "@org/shop/data": ["packages/shop/data/src/index.ts"],
-      "@org/shop/feature-product-detail": [
-        "packages/shop/feature-product-detail/src/index.ts"
-      ],
-      "@org/shop/feature-products": [
-        "packages/shop/feature-products/src/index.ts"
-      ],
-      "@org/shop/shared-ui": ["packages/shop/shared-ui/src/index.ts"],
       "@codewithahsan/quill-ink-core": [
         "./packages/quill-ink-core/src/index.ts"
       ],
       "@codewithahsan/ngx-quill-ink": ["./packages/ngx-quill-ink/src/index.ts"],
       "@codewithahsan/quill-ink-fonts": [
         "./packages/quill-ink-fonts/src/index.ts"
+      ],
+      "@codewithahsan/quill-ink-fonts/caveat": [
+        "./packages/quill-ink-fonts/src/lib/caveat.ts"
+      ],
+      "@codewithahsan/quill-ink-fonts/dancing-script": [
+        "./packages/quill-ink-fonts/src/lib/dancing-script.ts"
+      ],
+      "@codewithahsan/quill-ink-fonts/shadows-into-light": [
+        "./packages/quill-ink-fonts/src/lib/shadows-into-light.ts"
       ]
     }
   },

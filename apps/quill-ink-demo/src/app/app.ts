@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { Hero } from './hero/hero';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
+  imports: [Hero],
   selector: 'app-root',
-  templateUrl: './app.html',
+  template: `<app-hero />`,
   styleUrl: './app.scss',
 })
-export class App {
-  protected title = 'quill-ink-demo';
-}
+export class App {}

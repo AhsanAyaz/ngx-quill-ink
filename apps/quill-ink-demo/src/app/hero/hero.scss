@@ -1,0 +1,82 @@
+.hero {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.6rem;
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    color: #5a6577;
+    margin: 0 0 2rem;
+    font-size: 1.15rem;
+
+    em {
+      font-style: italic;
+      color: #1a2b4a;
+    }
+  }
+}
+
+.stage {
+  background: #fbf8f1;
+  border: 1px solid #e8e2d4;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(26, 43, 74, 0.08);
+  overflow: hidden;
+
+  .paper {
+    display: block;
+    width: 100%;
+    height: 340px;
+  }
+}
+
+.controls {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    font: inherit;
+    border: 1px solid #d8dce3;
+    border-radius: 10px;
+    resize: vertical;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  button {
+    padding: 0.65rem 1.4rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: #1a2b4a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+
+    &.ghost {
+      background: transparent;
+      color: #1a2b4a;
+      border: 1px solid #c9cfda;
+    }
+  }
+}
