@@ -21,8 +21,17 @@
       "@org/shop/feature-product-detail": [
         "packages/shop/feature-product-detail/src/index.ts"
       ],
-      "@org/shop/feature-products": ["packages/shop/feature-products/src/index.ts"],
-      "@org/shop/shared-ui": ["packages/shop/shared-ui/src/index.ts"]
+      "@org/shop/feature-products": [
+        "packages/shop/feature-products/src/index.ts"
+      ],
+      "@org/shop/shared-ui": ["packages/shop/shared-ui/src/index.ts"],
+      "@codewithahsan/quill-ink-core": [
+        "./packages/quill-ink-core/src/index.ts"
+      ],
+      "@codewithahsan/ngx-quill-ink": ["./packages/ngx-quill-ink/src/index.ts"],
+      "@codewithahsan/quill-ink-fonts": [
+        "./packages/quill-ink-fonts/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

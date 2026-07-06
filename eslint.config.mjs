@@ -21,20 +21,25 @@ export default [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
             {
-              sourceTag: 'scope:shared',
-              onlyDependOnLibsWithTags: ['scope:shared'],
+              sourceTag: 'scope:core',
+              onlyDependOnLibsWithTags: ['scope:core'],
             },
             {
-              sourceTag: 'scope:shop',
-              onlyDependOnLibsWithTags: ['scope:shop', 'scope:shared'],
+              sourceTag: 'scope:fonts',
+              onlyDependOnLibsWithTags: ['scope:core', 'scope:fonts'],
             },
             {
-              sourceTag: 'scope:api',
-              onlyDependOnLibsWithTags: ['scope:api', 'scope:shared'],
+              sourceTag: 'scope:angular',
+              onlyDependOnLibsWithTags: ['scope:core', 'scope:angular'],
             },
             {
-              sourceTag: 'type:data',
-              onlyDependOnLibsWithTags: ['type:data'],
+              sourceTag: 'scope:demo',
+              onlyDependOnLibsWithTags: [
+                'scope:core',
+                'scope:fonts',
+                'scope:angular',
+                'scope:demo',
+              ],
             },
           ],
         },
@@ -54,5 +59,23 @@ export default [
     ],
     // Override or add rules here
     rules: {},
+  },
+  {
+    // quill-ink-core must stay framework-free (enables React/Vue wrappers)
+    files: ['packages/quill-ink-core/**/*.ts'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['@angular/*', 'rxjs', 'rxjs/*', 'zone.js'],
+              message:
+                'quill-ink-core is framework-agnostic — no Angular/rxjs imports allowed.',
+            },
+          ],
+        },
+      ],
+    },
   },
 ];
