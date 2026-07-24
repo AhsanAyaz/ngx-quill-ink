@@ -1,6 +1,6 @@
 {
   "name": "@codewithahsan/quill-ink-fonts",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "commonjs",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -11,7 +11,7 @@
   "sideEffects": false,
   "description": "Precomputed handwriting glyph skeleton packs (Caveat, Dancing Script, Shadows Into Light) for quill-ink.",
   "peerDependencies": {
-    "@codewithahsan/quill-ink-core": "^0.0.1"
+    "@codewithahsan/quill-ink-core": "^0.1.0"
   },
   "exports": {
     ".": {

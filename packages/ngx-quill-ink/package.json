@@ -1,9 +1,9 @@
 {
   "name": "@codewithahsan/ngx-quill-ink",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/core": "^22.0.0",
-    "@codewithahsan/quill-ink-core": "^0.0.1"
+    "@codewithahsan/quill-ink-core": "^0.1.0"
   },
   "sideEffects": false,
   "license": "MIT",
