@@ -26,7 +26,7 @@ Draw on the surface and the page **drinks the ink**: a left-to-right dissolve ab
 | [`@codewithahsan/ngx-quill-ink`](packages/ngx-quill-ink) | Angular wrapper: `<quill-ink>`, signals-first, zoneless, SSR-safe | ≤ 6 KB gz |
 | [`@codewithahsan/quill-ink-fonts`](packages/quill-ink-fonts) | Precomputed glyph skeleton packs for 3 OFL handwriting fonts | ~60–85 KB gz per font |
 
-Demo/playground app lives in [`apps/quill-ink-demo`](apps/quill-ink-demo) (deploys to Netlify).
+**▶ [Try the live demo](https://ahsanayaz.github.io/ngx-quill-ink/)** — streaming, capture, and a playground to tune the pen. Source in [`apps/quill-ink-demo`](apps/quill-ink-demo); it deploys to GitHub Pages on every push to `main`.
 
 ## Quick start (Angular)
 
