@@ -4,6 +4,20 @@
 
 A framework-agnostic TypeScript engine + Angular wrapper that renders streaming text as **animated handwriting** (ink flowing from an invisible quill), and captures **user pen strokes** (with a theatrical "the page drinks your ink" fade) for consumption by vision LLMs.
 
+<p align="center">
+  <img src="docs/streaming.gif" alt="Streamed tokens rendered as animated handwriting, a sentence at a time" width="720">
+</p>
+
+Tokens arrive and the quill writes them. No typewriter effect, no spinner — the latency *is* the animation.
+
+### …and it reads your pen, too
+
+Draw on the surface and the page **drinks the ink**: a left-to-right dissolve absorbs your strokes and hands you a clean PNG plus the raw stroke data, ready for a vision model.
+
+<p align="center">
+  <img src="docs/capture.gif" alt="Handwritten strokes dissolving into the paper, left to right" width="680">
+</p>
+
 ## Packages
 
 | Package | What | Budget |
