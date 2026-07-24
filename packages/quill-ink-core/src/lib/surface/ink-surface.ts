@@ -323,7 +323,8 @@ export class InkSurface {
     if (!this.alive) return;
     this.scheduler.skipAll();
     if (mode === 'dissolve') {
-      const bounds = { x: 0, y: 0, width: this.width * this.dpr, height: this.height * this.dpr };
+      // CSS px — the layer ctx is dpr-scaled already.
+      const bounds = { x: 0, y: 0, width: this.width, height: this.height };
       await Promise.all([
         runDissolve(this.committed.bitmap as HTMLCanvasElement, bounds, this.clock, this.opts.seed, () => this.render()),
         runDissolve(this.captureLayer.bitmap as HTMLCanvasElement, bounds, this.clock, this.opts.seed + 1, () => this.render()),
@@ -389,16 +390,11 @@ export class InkSurface {
         strokes,
         bounds: new DOMRect(boundsBox.x, boundsBox.y, boundsBox.width, boundsBox.height),
       };
-      // the page drinks the ink
-      const deviceBounds = {
-        x: boundsBox.x * this.dpr,
-        y: boundsBox.y * this.dpr,
-        width: boundsBox.width * this.dpr,
-        height: boundsBox.height * this.dpr,
-      };
+      // the page drinks the ink — bounds in CSS px: the layer ctx already
+      // carries the dpr scale, so device-px coords would land at dpr².
       await runDissolve(
         this.captureLayer.bitmap as HTMLCanvasElement,
-        deviceBounds,
+        boundsBox,
         this.clock,
         this.opts.seed,
         () => this.render()

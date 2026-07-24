@@ -23,7 +23,8 @@ export function runDissolve(
   if (!ctx || bounds.width <= 0 || bounds.height <= 0) return Promise.resolve();
 
   const rng = mulberry32(seed ^ 0xd15501);
-  // pre-generate noise specks across the bounds (device px assumed pre-scaled)
+  // pre-generate noise specks across the bounds (CSS px — the layer context
+  // is expected to carry the devicePixelRatio scale)
   const specks: Array<{ x: number; y: number; r: number; jitterT: number }> = [];
   const count = Math.ceil((bounds.width * bounds.height) / 26);
   for (let i = 0; i < count; i++) {
