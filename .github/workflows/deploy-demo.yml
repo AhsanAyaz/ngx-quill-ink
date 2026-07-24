@@ -1,0 +1,52 @@
+name: Deploy demo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Allow one concurrent deployment, and let a newer push supersede a running one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - run: npm ci
+
+      # The site is served from https://<user>.github.io/ngx-quill-ink/,
+      # so assets must resolve against that sub-path.
+      - run: npx nx build quill-ink-demo --base-href=/ngx-quill-ink/
+
+      # GitHub Pages has no SPA rewrite; serving index.html as the 404 page
+      # keeps deep links working.
+      - run: cp dist/apps/quill-ink-demo/browser/index.html dist/apps/quill-ink-demo/browser/404.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/apps/quill-ink-demo/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
