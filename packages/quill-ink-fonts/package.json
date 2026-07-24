@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codewithahsan/ngx-quill-ink.git"
+    "url": "https://github.com/AhsanAyaz/ngx-quill-ink.git"
   },
-  "bugs": "https://github.com/codewithahsan/ngx-quill-ink/issues",
-  "homepage": "https://github.com/codewithahsan/ngx-quill-ink#readme",
+  "bugs": "https://github.com/AhsanAyaz/ngx-quill-ink/issues",
+  "homepage": "https://github.com/AhsanAyaz/ngx-quill-ink#readme",
   "publishConfig": {
     "access": "public"
   },
